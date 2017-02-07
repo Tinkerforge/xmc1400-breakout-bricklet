@@ -6540,7 +6540,7 @@
       (clearance 0.65024))
   )
 
-  (module kicad-libraries:Fiducial_Mark (layer Vorderseite) (tedit 560531B0) (tstamp 58277851)
+  (module kicad-libraries:Fiducial_Mark (layer Vorderseite) (tedit 5899C8B9) (tstamp 58277851)
     (at 163 86)
     (attr smd)
     (fp_text reference Fiducial_Mark (at 0 0) (layer F.SilkS) hide
@@ -6555,7 +6555,7 @@
   )
 
   (module kicad-libraries:Fiducial_Mark (layer Vorderseite) (tedit 560531B0) (tstamp 5827785C)
-    (at 131.3 93.1)
+    (at 131 93)
     (attr smd)
     (fp_text reference Fiducial_Mark (at 0 0) (layer F.SilkS) hide
       (effects (font (size 0.127 0.127) (thickness 0.03302)))
