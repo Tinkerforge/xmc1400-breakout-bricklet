@@ -3,7 +3,7 @@
   (general
     (links 99)
     (no_connects 1)
-    (area 120.109499 82.909499 170.490501 128.290501)
+    (area 119.445139 82.245139 282.895869 162.490743)
     (thickness 1.6002)
     (drawings 70)
     (tracks 377)
@@ -24,7 +24,7 @@
 
   (layers
     (0 Vorderseite signal)
-    (31 Rückseite signal)
+    (31 Rückseite signal hide)
     (32 B.Adhes user)
     (33 F.Adhes user)
     (34 B.Paste user)
@@ -43,7 +43,7 @@
   )
 
   (setup
-    (last_trace_width 0.5)
+    (last_trace_width 0.2)
     (user_trace_width 0.25)
     (user_trace_width 0.29972)
     (user_trace_width 0.45)
@@ -7453,7 +7453,7 @@
   (gr_arc (start 167.8 85.6) (end 167.8 83.1) (angle 90) (layer Edge.Cuts) (width 0.381))
   (gr_line (start 122.8 83.1) (end 167.8 83.1) (angle 90) (layer Edge.Cuts) (width 0.381))
   (gr_arc (start 167.8 125.6) (end 170.3 125.6) (angle 90) (layer Edge.Cuts) (width 0.381))
-  (gr_text Status (at 134.2 94.4 315) (layer F.SilkS)
+  (gr_text status (at 134.2 94.4 315) (layer F.SilkS)
     (effects (font (size 0.8 0.8) (thickness 0.15)) (justify left))
   )
   (gr_line (start 167.8 128.1) (end 122.8 128.1) (angle 90) (layer Edge.Cuts) (width 0.381))
