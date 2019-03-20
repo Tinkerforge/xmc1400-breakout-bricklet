@@ -1,5 +1,5 @@
 /* xmc1400-breakout-bricklet
- * Copyright (C) 2017 Olaf Lüke <olaf@tinkerforge.com>
+ * Copyright (C) 2017-2019 Olaf Lüke <olaf@tinkerforge.com>
  *
  * config_custom_bootloader.h: Bootloader configurations for 
  *                             XMC1400 Breakout Bricklet
@@ -36,6 +36,8 @@
 
 #define BOOTLOADER_FLASH_EEPROM_SIZE   (4*256)
 #define BOOTLOADER_FLASH_SIZE          (64*1024 - BOOTLOADER_FLASH_EEPROM_SIZE)
+
+#define BOOTLOADER_FIX_POINTER_END
 
 
 // --- Oscilater defines ---

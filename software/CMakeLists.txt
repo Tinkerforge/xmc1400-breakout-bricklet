@@ -29,15 +29,20 @@ INCLUDE_DIRECTORIES(
 SET(SOURCES
 	"${PROJECT_SOURCE_DIR}/src/main.c"
 	"${PROJECT_SOURCE_DIR}/src/communication.c"
+	"${PROJECT_SOURCE_DIR}/src/adc.c"
+	"${PROJECT_SOURCE_DIR}/src/example.c"
 	
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/hal/uartbb/uartbb.c"
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/hal/system_timer/system_timer.c"
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/hal/startup/startup_xmc1.c"
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/hal/startup/startup_xmc1400.S"
+	"${PROJECT_SOURCE_DIR}/src/bricklib2/os/coop_task.c"
+	"${PROJECT_SOURCE_DIR}/src/bricklib2/os/coop_task_pendsv_handler.S"
 	
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/bootloader/bootloader.c"
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/bootloader/bootloader_xmc_irq.c"
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/protocols/tfp/tfp.c"
+	"${PROJECT_SOURCE_DIR}/src/bricklib2/logging/logging.c"
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/utility/ringbuffer.c"
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/utility/pearson_hash.c"
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/utility/communication_callback.c"
@@ -48,6 +53,7 @@ SET(SOURCES
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/xmclib/XMCLib/src/xmc_usic.c"
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/xmclib/XMCLib/src/xmc1_scu.c"
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/xmclib/XMCLib/src/xmc1_flash.c"
+	"${PROJECT_SOURCE_DIR}/src/bricklib2/xmclib/XMCLib/src/xmc_vadc.c"
 )
 
 MESSAGE(STATUS "\nFound following source files:\n ${SOURCES}\n")

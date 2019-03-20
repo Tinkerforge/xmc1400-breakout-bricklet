@@ -1,5 +1,5 @@
 /* xmc1400-breakout-bricklet
- * Copyright (C) 2017 Olaf Lüke <olaf@tinkerforge.com>
+ * Copyright (C) 2017-2019 Olaf Lüke <olaf@tinkerforge.com>
  *
  * config_custom_bootstrapper.h: XMC bootstrapper configurations for 
  *                               XMC1400 Breakout Bricklet

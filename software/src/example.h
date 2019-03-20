@@ -1,7 +1,7 @@
 /* xmc1400-breakout-bricklet
- * Copyright (C) 2017-2019 Olaf Lüke <olaf@tinkerforge.com>
+ * Copyright (C) 2019 Olaf Lüke <olaf@tinkerforge.com>
  *
- * config.h: All configurations for XMC1400 Breakout Bricklet
+ * example.h: Example for a coop task
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -19,20 +19,19 @@
  * Boston, MA 02111-1307, USA.
  */
 
-#ifndef CONFIG_GENERAL_H
-#define CONFIG_GENERAL_H
+#ifndef EXAMPLE_H
+#define EXAMPLE_H
 
-#include "xmc_device.h"
+#include <stdint.h>
 
-#define STARTUP_SYSTEM_INIT_ALREADY_DONE
-#define SYSTEM_TIMER_FREQUENCY 1000 // Use 1 kHz system timer
+typedef struct {
+    uint32_t count;
+} Example;
 
-#define UARTBB_TX_PIN P0_0
+extern Example example;
 
-#define FIRMWARE_VERSION_MAJOR 2
-#define FIRMWARE_VERSION_MINOR 0
-#define FIRMWARE_VERSION_REVISION 0
-
-#include "config_custom_bootloader.h"
+void example_tick(void);
+void example_init(void);
+uint32_t example_get_count(void);
 
 #endif
