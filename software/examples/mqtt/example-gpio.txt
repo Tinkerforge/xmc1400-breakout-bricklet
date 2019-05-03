@@ -1,0 +1,15 @@
+# Change XYZ to the UID of your XMC1400 Breakout Bricklet
+
+setup:
+	# Set Port 1, Pin 0 alternating high/low for 5 times with 1s delay
+	for i in 0 1 2 3 4; do
+	
+		wait for 1s 
+	
+		publish '{"port": 1, "pin": 0, "mode": "output_push_pull", "input_hysteresis": "standard", "output_level": false}' to tinkerforge/request/xmc1400_breakout_bricklet/XYZ/set_gpio_config 
+	
+		wait for 1s 
+	
+		publish '{"port": 1, "pin": 0, "mode": "output_push_pull", "input_hysteresis": "standard", "output_level": true}' to tinkerforge/request/xmc1400_breakout_bricklet/XYZ/set_gpio_config 
+	
+	done

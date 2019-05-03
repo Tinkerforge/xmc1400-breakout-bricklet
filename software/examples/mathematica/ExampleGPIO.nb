@@ -1,0 +1,31 @@
+Notebook[{
+ Cell[
+  BoxData[{
+   RowBox[{"Needs", "[", "\"\<NETLink`\>\"", "]"}],
+   RowBox[{"LoadNETAssembly", "[", RowBox[{"\"\<Tinkerforge\>\"", ",", RowBox[{RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<../../..\>\""}]}], "]"}]
+  }], "Input"
+ ],
+ Cell[
+  BoxData[{
+   RowBox[{"host", "=", "\"\<localhost\>\""}],
+   RowBox[{"port", "=", "4223"}],
+   RowBox[{"uid", "=", "\"\<XYZ\>\"", RowBox[{"(*", "Change XYZ to the UID of your XMC1400 Breakout Bricklet", "*)"}]}],
+   RowBox[{"
+"}],
+   RowBox[{"(*", "Create IPConnection and device object", "*)"}],
+   RowBox[{"ipcon", "=", RowBox[{"NETNew", "[", "\"\<Tinkerforge.IPConnection\>\"", "]"}]}],
+   RowBox[{"xb", "=", RowBox[{"NETNew", "[", RowBox[{"\"\<Tinkerforge.BrickletXMC1400Breakout\>\"", ",", "uid", ",", "ipcon"}], "]"}]}],
+   RowBox[{"ipcon", "@", RowBox[{"Connect", "[", RowBox[{"host", ",", "port"}], "]"}]}],
+   RowBox[{"
+"}],
+   RowBox[{"(*", "Set Port 1, Pin 0 alternating high/low for 5 times with 1s delay", "*)"}],
+   RowBox[{"For", "[", RowBox[{RowBox[{"i", "=", "0"}], ",", RowBox[{"i", "<", "5"}], ",", RowBox[{"i", "++"}], ",", RowBox[{"\[IndentingNewLine]", RowBox[{"Pause", "[", "1", "]"}], ";", "\[IndentingNewLine]", "xb", "@", RowBox[{"SetGPIOConfig", "[", RowBox[{"1", ",", "0", ",", "Tinkerforge`BrickletXMC1400Breakout`GPIOUMODEUOUTPUTUPUSHUPULL", ",", "0", ",", RowBox[{"\[IndentingNewLine]", "False"}]}], "]"}], ";", "\[IndentingNewLine]", RowBox[{"Pause", "[", "1", "]"}], ";", "\[IndentingNewLine]", "xb", "@", RowBox[{"SetGPIOConfig", "[", RowBox[{"1", ",", "0", ",", "Tinkerforge`BrickletXMC1400Breakout`GPIOUMODEUOUTPUTUPUSHUPULL", ",", "0", ",", RowBox[{"\[IndentingNewLine]", "True"}]}], "]"}], "\[IndentingNewLine]"}]}], "]"}],
+   RowBox[{"
+"}],
+   RowBox[{"(*", "Clean up", "*)"}],
+   RowBox[{"ipcon", "@", RowBox[{"Disconnect", "[", "]"}]}],
+   RowBox[{"ReleaseNETObject", "[", "xb", "]"}],
+   RowBox[{"ReleaseNETObject", "[", "ipcon", "]"}]
+  }], "Input"
+ ]
+}]

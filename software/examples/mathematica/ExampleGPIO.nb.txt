@@ -1,0 +1,26 @@
+Needs["NETLink`"]
+LoadNETAssembly["Tinkerforge",NotebookDirectory[]<>"../../.."]
+
+host="localhost"
+port=4223
+uid="XYZ"(*Change XYZ to the UID of your XMC1400 Breakout Bricklet*)
+
+(*Create IPConnection and device object*)
+ipcon=NETNew["Tinkerforge.IPConnection"]
+xb=NETNew["Tinkerforge.BrickletXMC1400Breakout",uid,ipcon]
+ipcon@Connect[host,port]
+
+(*Set Port 1, Pin 0 alternating high/low for 5 times with 1s delay*)
+For[i=0,i<5,i++,
+ Pause[1];
+ xb@SetGPIOConfig[1,0,Tinkerforge`BrickletXMC1400Breakout`GPIOUMODEUOUTPUTUPUSHUPULL,0,
+                  False];
+ Pause[1];
+ xb@SetGPIOConfig[1,0,Tinkerforge`BrickletXMC1400Breakout`GPIOUMODEUOUTPUTUPUSHUPULL,0,
+                  True]
+]
+
+(*Clean up*)
+ipcon@Disconnect[]
+ReleaseNETObject[xb]
+ReleaseNETObject[ipcon]
