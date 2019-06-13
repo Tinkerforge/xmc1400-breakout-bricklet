@@ -6816,7 +6816,6 @@
     (descr "Double rangee de contacts 2 x 4 pins")
     (tags CONN)
     (path /59A56AE8)
-    (attr smd)
     (fp_text reference P7 (at -0.04956 0.1758) (layer F.Fab)
       (effects (font (size 0.7 0.7) (thickness 0.175)))
     )
