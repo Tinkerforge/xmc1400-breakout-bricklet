@@ -18,7 +18,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Text Notes 550  7700 0    40   ~ 0
-Copyright Tinkerforge GmbH 2017.\nThis documentation describes Open Hardware and is licensed under the\nCERN OHL v. 1.1.\nYou may redistribute and modify this documentation under the terms of the\nCERN OHL v.1.1. (http://ohwr.org/cernohl). This documentation is distributed\nWITHOUT ANY EXPRESS OR IMPLIED WARRANTY, INCLUDING OF\nMERCHANTABILITY, SATISFACTORY QUALITY AND FITNESS FOR A\nPARTICULAR PURPOSE. Please see the CERN OHL v.1.1 for applicable\nconditions\n
+Copyright Tinkerforge GmbH 2019.\nThis documentation describes Open Hardware and is licensed under the\nCERN OHL v. 1.1.\nYou may redistribute and modify this documentation under the terms of the\nCERN OHL v.1.1. (http://ohwr.org/cernohl). This documentation is distributed\nWITHOUT ANY EXPRESS OR IMPLIED WARRANTY, INCLUDING OF\nMERCHANTABILITY, SATISFACTORY QUALITY AND FITNESS FOR A\nPARTICULAR PURPOSE. Please see the CERN OHL v.1.1 for applicable\nconditions\n
 $Comp
 L tinkerforge:DRILL U2
 U 1 1 4C6050A5
@@ -844,7 +844,7 @@ $Comp
 L tinkerforge:CONN_02X04 P7
 U 1 1 59A56AE8
 P 3100 6500
-F 0 "P7" H 3100 6750 50  0000 C CNN
+F 0 "P7" H 2950 6800 50  0000 C CNN
 F 1 "CONN_02X04" H 3100 6250 50  0000 C CNN
 F 2 "kicad-libraries:pin_array_4x2" H 3100 5300 50  0001 C CNN
 F 3 "" H 3100 5300 50  0000 C CNN
@@ -1007,7 +1007,7 @@ F 3 "" H 8550 2800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR022
+L tinkerforge:GND #PWR022
 U 1 1 5C5CB716
 P 8550 3050
 F 0 "#PWR022" H 8550 2800 50  0001 C CNN
