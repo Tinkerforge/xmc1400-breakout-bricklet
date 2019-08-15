@@ -81,7 +81,7 @@ BootloaderHandleMessageResponse set_gpio_config(const SetGPIOConfig *data) {
 		return HANDLE_MESSAGE_RESPONSE_INVALID_PARAMETER;
 	}
 
-	if(data->input_hysteresis != XMC1400_BREAKOUT_GPIO_INPUT_HYSTERESIS_STANDARD ||
+	if(data->input_hysteresis != XMC1400_BREAKOUT_GPIO_INPUT_HYSTERESIS_STANDARD &&
 	   data->input_hysteresis != XMC1400_BREAKOUT_GPIO_INPUT_HYSTERESIS_LARGE) {
 		return HANDLE_MESSAGE_RESPONSE_INVALID_PARAMETER;
 	}
