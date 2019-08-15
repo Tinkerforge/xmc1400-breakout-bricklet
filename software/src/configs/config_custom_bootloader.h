@@ -40,10 +40,14 @@
 #define BOOTLOADER_FIX_POINTER_END
 
 
-// --- Oscilater defines ---
-#define OSCHP_FREQUENCY 16000000
-#define DCLK_CLOCK_SRC  1
-#define DCO1_CAL_SRC    1
+// --- Oscillator defines ---
+
+// Add 0 ohm resistor on pcb (below oscillator) and uncomment the
+// following defines to enable external oscillator support.
+
+// #define OSCHP_FREQUENCY 16000000
+// #define DCLK_CLOCK_SRC  1
+// #define DCO1_CAL_SRC    1
 
 
 // --- SPITFP ---
