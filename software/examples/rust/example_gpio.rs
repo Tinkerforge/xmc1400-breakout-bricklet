@@ -1,6 +1,4 @@
-use std::thread;
-use std::time::Duration;
-use std::{error::Error, io};
+use std::{error::Error, io, thread, time::Duration};
 use tinkerforge::{ip_connection::IpConnection, xmc1400_breakout_bricklet::*};
 
 const HOST: &str = "localhost";
