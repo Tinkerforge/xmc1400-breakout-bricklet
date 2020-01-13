@@ -24,5 +24,5 @@ if __name__ == "__main__":
         time.sleep(1)
         xb.set_gpio_config(1, 0, xb.GPIO_MODE_OUTPUT_PUSH_PULL, 0, True)
 
-    raw_input("Press key to exit\n") # Use input() in Python 3
+    input("Press key to exit\n") # Use raw_input() in Python 2
     ipcon.disconnect()
