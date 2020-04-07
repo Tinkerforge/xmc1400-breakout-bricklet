@@ -15,9 +15,9 @@ fn main() -> Result<(), Box<dyn Error>> {
     // Set Port 1, Pin 0 alternating high/low for 5 times with 1s delay
     for _i in 0..5 {
         thread::sleep(Duration::from_millis(1000));
-        xb.set_gpio_config(1, 0, XMC1400_BREAKOUT_BRICKLET_GPIO_MODE_OUTPUT_PUSH_PULL, 0, false);
+        xb.set_gpio_config(1, 0, XMC1400_BREAKOUT_BRICKLET_GPIO_MODE_OUTPUT_PUSH_PULL, 0, false).recv()?;
         thread::sleep(Duration::from_millis(1000));
-        xb.set_gpio_config(1, 0, XMC1400_BREAKOUT_BRICKLET_GPIO_MODE_OUTPUT_PUSH_PULL, 0, true);
+        xb.set_gpio_config(1, 0, XMC1400_BREAKOUT_BRICKLET_GPIO_MODE_OUTPUT_PUSH_PULL, 0, true).recv()?;
     }
 
     println!("Press enter to exit.");
