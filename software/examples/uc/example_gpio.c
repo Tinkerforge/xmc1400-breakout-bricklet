@@ -1,14 +1,9 @@
-
-
 #include "bindings/hal_common.h"
 #include "bindings/bricklet_xmc1400_breakout.h"
 
 #define UID "XYZ" // Change XYZ to the UID of your XMC1400 Breakout Bricklet
 
 void check(int rc, const char* msg);
-
-
-
 
 TF_XMC1400Breakout xb;
 
