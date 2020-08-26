@@ -11,7 +11,6 @@ void example_setup(TF_HalContext *hal) {
 	// Create device object
 	check(tf_xmc1400_breakout_create(&xb, UID, hal), "create device object");
 
-
 	// Set Port 1, Pin 0 alternating high/low for 5 times with 1s delay
 	int i;
 	for(i = 0; i < 5; ++i) {
@@ -24,7 +23,6 @@ void example_setup(TF_HalContext *hal) {
 		                                          TF_XMC1400_BREAKOUT_GPIO_MODE_OUTPUT_PUSH_PULL,
 		                                          0, true), "call set_gpio_config");
 	}
-
 }
 
 void example_loop(TF_HalContext *hal) {
