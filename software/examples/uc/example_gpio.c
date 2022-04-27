@@ -1,23 +1,19 @@
 // This example is not self-contained.
-// It requres usage of the example driver specific to your platform.
+// It requires usage of the example driver specific to your platform.
 // See the HAL documentation.
 
-#include "bindings/hal_common.h"
-#include "bindings/bricklet_xmc1400_breakout.h"
+#include "src/bindings/hal_common.h"
+#include "src/bindings/bricklet_xmc1400_breakout.h"
 
-#define UID "XYZ" // Change XYZ to the UID of your XMC1400 Breakout Bricklet
-
-void check(int rc, const char* msg);
-
+void check(int rc, const char *msg);
 void example_setup(TF_HAL *hal);
 void example_loop(TF_HAL *hal);
-
 
 static TF_XMC1400Breakout xb;
 
 void example_setup(TF_HAL *hal) {
 	// Create device object
-	check(tf_xmc1400_breakout_create(&xb, UID, hal), "create device object");
+	check(tf_xmc1400_breakout_create(&xb, NULL, hal), "create device object");
 
 	// Set Port 1, Pin 0 alternating high/low for 5 times with 1s delay
 	int i;
